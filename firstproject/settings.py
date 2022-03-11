@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'testurlapp',
     'teststaticapp',
     'validformapp',
+    'authapp',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,4 @@ STATICFILES_DIRS = [
     STATICFILE_DIR,
 ]
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+LOGIN_REDIRECT_URL = '/'

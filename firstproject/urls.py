@@ -15,14 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from validformapp import views
+from authapp import views
 
 from django.conf.urls.static import static
 from django.conf import settings
 
+from django.contrib.auth.views import LoginView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', views.home, name='home'),
-    # path('<int:pizza_id>/', views.pizza_detail, name='pizza-detail'),
-    path('formpage/', views.form_page, name='form-page')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', views.home, name='home'),
+    path('authapp/login/', LoginView.as_view(template_name='authapp/login.html'),
+        name='authapp-login')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
