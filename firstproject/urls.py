@@ -30,4 +30,6 @@ urlpatterns = [
     path('authapp/logout/', LogoutView.as_view(next_page='/'),
         name='authapp-logout'),
     path('authapp/', views.authapp_home, name='authapp-home'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+    path('authapp/sign-up', views.authapp_sign_up, name='authapp-sign-up')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
