@@ -3,7 +3,7 @@ from django import forms
 from authapp.models import PizzaShop
 
 class UserForm(forms.ModelForm):
-       email = forms.CharField(max_length=100, required=True)
+    email = forms.CharField(max_length=100, required=True)
     password = forms.CharField(widget=forms.PasswordInput)
     class Meta:
         model = User

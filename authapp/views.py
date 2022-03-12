@@ -40,4 +40,4 @@ def authapp_sign_up(request):
     return render(request, 'authapp/sign_up.html', {
         'user_form': user_form,
         'pizzashop_form': pizzashop_form
-    }) 
+    })
